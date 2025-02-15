@@ -9,9 +9,10 @@ require('dotenv').config();
 //middleware
 app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:5173/', 'https://book-app-frontend-lime-eight.vercel.app/'],
+  origin: '*',  // Allows all origins; for production, specify allowed origins
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true
-}))
+}));
 
 //routes
 const bookRoutes = require("./src/books/book.route")
