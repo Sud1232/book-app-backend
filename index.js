@@ -9,7 +9,7 @@ require('dotenv').config();
 //middleware
 app.use(express.json());
 app.use(cors({
-  origin: '*',  // Allows all origins; for production, specify allowed origins
+  origin: 'http://localhost:5173',  // Allows all origins; for production, specify allowed origins
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true
 }));
